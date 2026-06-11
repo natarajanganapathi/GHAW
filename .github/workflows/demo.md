@@ -3,6 +3,10 @@ on:
   workflow_dispatch:
   schedule: daily
 
+engine:
+  id: copilot
+  model: gpt-4o
+
 permissions:
   contents: read
   issues: read
