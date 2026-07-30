@@ -1,7 +1,8 @@
 ---
 on:
   workflow_dispatch:
-  schedule: daily
+  schedule:
+    - cron: "0 8 * * *"
 
 engine:
   id: copilot
@@ -16,7 +17,6 @@ safe-outputs:
   create-issue:
     title-prefix: "[team-status] "
     labels: [report, daily-status]
-    close-older-issues: true
 ---
 
 ## Daily Issues Report
